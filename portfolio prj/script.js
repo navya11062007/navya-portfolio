@@ -1,6 +1,8 @@
 
-const yearElement = document.getElementById("year");
+document.addEventListener("DOMContentLoaded", function () {
+    const yearElements = document.querySelectorAll(".year");
 
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-}
+    yearElements.forEach(function (element) {
+        element.textContent = new Date().getFullYear();
+    });
+});
