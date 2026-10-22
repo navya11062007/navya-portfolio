@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navya N | Portfolio</title>
+    <title>Home | Navya N</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
-    <h2>Navya N</h2>
+    <a class="logo" href="index.html">navya<span>.</span></a>
     <nav>
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -22,27 +21,39 @@
     </nav>
 </header>
 
-<main class="home">
-    <div class="home-content">
-        <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+<main class="hero">
+    <section class="hero-text">
+        <p class="welcome">♡ WELCOME TO MY PORTFOLIO</p>
         <h1>Hi, I'm <span>Navya N!</span></h1>
-        <h2>B.Sc. Information Technology Student</h2>
-        <p>
-            I am interested in web development, programming,
-            and designing. I enjoy learning new technologies
-            and building creative projects.
+        <h2>Student · Creator · Future Developer</h2>
+        <p class="intro">
+            I'm a second-year B.Sc. Information Technology student
+            who enjoys coding, designing, and turning creative ideas
+            into meaningful digital experiences.
         </p>
-        <a class="btn" href="about.html">Next Page →</a>
-    </div>
+        <div class="hero-buttons">
+            <a class="btn" href="projects.html">View My Projects ↗</a>
+            <a class="btn secondary" href="about.html">About Me ♡</a>
+        </div>
 
-    <div class="profile">
-        <div class="profile-circle">N</div>
-        <h2>Navya N</h2>
-        <p>IT Student | Aspiring Developer</p>
-    </div>
+        <div class="mini-info">
+            <div><strong>2nd</strong><span>Year Student</span></div>
+            <div><strong>5</strong><span>Certificates</span></div>
+            <div><strong>1</strong><span>Featured Project</span></div>
+        </div>
+    </section>
+
+    <section class="hero-message">
+        <span class="decor-heart">♡</span>
+        <p class="small-label">A LITTLE ABOUT MY JOURNEY</p>
+        <h2>Big dreams.<br><span>Creative ideas.</span><br>Continuous learning.</h2>
+        <div class="decor-line"></div>
+        <p>Exploring technology one idea at a time.</p>
+        <a href="skills.html" class="text-link">Explore my skills →</a>
+    </section>
 </main>
 
-<footer>© <span id="year"></span> Navya N | My Portfolio</footer>
+<footer>© <span class="year"></span> Navya N <span>Made with ♡</span></footer>
 <script src="script.js"></script>
 </body>
 </html>
