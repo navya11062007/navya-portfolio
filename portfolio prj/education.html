@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
-    <h2>Navya N</h2>
+    <a class="logo" href="index.html">navya<span>.</span></a>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -23,21 +22,30 @@
 </header>
 
 <main class="page-content">
+    <p class="welcome">MY ACADEMIC JOURNEY</p>
     <h1>My <span>Education</span></h1>
-    <div class="card">
-        <p class="welcome">CURRENT EDUCATION</p>
+
+    <article class="card education-card">
+        <div class="education-icon">✧</div>
+        <p class="project-tag">CURRENTLY STUDYING</p>
         <h2>B.Sc. Information Technology</h2>
-        <p><strong>Year:</strong> Second year</p>
-        <p><strong>Institution:</strong> K.G. College of Arts and Science</p>
-        <p><strong>Location:</strong> Coimbatore, Tamil Nadu</p>
-    </div>
+        <h3>K.G. College of Arts and Science</h3>
+        <p>Second Year</p>
+        <p>Coimbatore, Tamil Nadu</p>
+        <div class="decor-line"></div>
+        <p>
+            Building my knowledge in information technology,
+            programming, and web development.
+        </p>
+    </article>
+
     <div class="page-buttons">
         <a class="btn secondary" href="projects.html">← Previous</a>
-        <a class="btn" href="certificates.html">Next Page →</a>
+        <a class="btn" href="certificates.html">Next: Certificates →</a>
     </div>
 </main>
 
-<footer>© <span id="year"></span> Navya N | My Portfolio</footer>
+<footer>© <span class="year"></span> Navya N <span>Made with ♡</span></footer>
 <script src="script.js"></script>
 </body>
 </html>
