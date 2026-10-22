@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
-    <h2>Navya N</h2>
+    <a class="logo" href="index.html">navya<span>.</span></a>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -23,21 +22,49 @@
 </header>
 
 <main class="page-content">
+    <p class="welcome">WHAT I'M INTERESTED IN</p>
     <h1>My <span>Skills</span></h1>
-    <div class="grid">
-        <div class="card"><h2>HTML</h2><p>Creating web page structures.</p></div>
-        <div class="card"><h2>JavaScript</h2><p>Adding interactivity to websites.</p></div>
-        <div class="card"><h2>Java</h2><p>Learning object-oriented programming.</p></div>
-        <div class="card"><h2>Python</h2><p>Programming and problem-solving.</p></div>
-        <div class="card"><h2>Designing</h2><p>Creating attractive and clear layouts.</p></div>
+    <p class="gallery-intro">Technologies I'm exploring and learning.</p>
+
+    <div class="skill-grid">
+        <article class="card skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML logo">
+            <h2>HTML</h2>
+            <p>Structuring web pages.</p>
+        </article>
+
+        <article class="card skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo">
+            <h2>JavaScript</h2>
+            <p>Adding website interactivity.</p>
+        </article>
+
+        <article class="card skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo">
+            <h2>Java</h2>
+            <p>Learning programming concepts.</p>
+        </article>
+
+        <article class="card skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo">
+            <h2>Python</h2>
+            <p>Programming and problem-solving.</p>
+        </article>
+
+        <article class="card skill-card">
+            <div class="design-icon">✿</div>
+            <h2>Designing</h2>
+            <p>Exploring layouts and visual ideas.</p>
+        </article>
     </div>
+
     <div class="page-buttons">
         <a class="btn secondary" href="about.html">← Previous</a>
-        <a class="btn" href="projects.html">Next Page →</a>
+        <a class="btn" href="projects.html">Next: Projects →</a>
     </div>
 </main>
 
-<footer>© <span id="year"></span> Navya N | My Portfolio</footer>
+<footer>© <span class="year"></span> Navya N <span>Made with ♡</span></footer>
 <script src="script.js"></script>
 </body>
 </html>
