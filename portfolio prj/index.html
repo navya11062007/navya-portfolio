@@ -4,270 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navya N | Portfolio</title>
-
+    <title>Home | Navya N</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Homepage styles only */
-        .home-header {
-            background: #fff;
-            padding: 18px 7%;
-            box-shadow: 0 2px 12px rgba(180, 70, 120, 0.08);
-        }
-
-        .home-navbar {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-        }
-
-        .home-logo {
-            color: #382d3b;
-            font-size: 28px;
-            font-weight: 700;
-            text-decoration: none;
-            white-space: nowrap;
-        }
-
-        .home-logo span {
-            color: #df4b91;
-        }
-
-        .home-nav-links {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            flex-wrap: wrap;
-            gap: 8px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .home-nav-links li {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .home-nav-links a {
-            display: inline-block;
-            color: #514252;
-            text-decoration: none;
-            padding: 10px 13px;
-            border-radius: 22px;
-            font-size: 15px;
-            transition: background 0.2s, color 0.2s;
-        }
-
-        .home-nav-links a:hover,
-        .home-nav-links a.active {
-            background: #df4b91;
-            color: #fff;
-        }
-
-        .home-hero {
-            min-height: 68vh;
-            padding: 75px 7%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #fff8fb, #fce7f1);
-        }
-
-        .home-hero-content {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .home-eyebrow {
-            color: #c33b7a;
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 18px;
-        }
-
-        .home-hero h1 {
-            color: #382d3b;
-            font-size: clamp(38px, 5vw, 60px);
-            line-height: 1.15;
-            margin: 0 0 14px;
-        }
-
-        .home-hero h1 span {
-            color: #df4b91;
-        }
-
-        .home-subtitle {
-            color: #59475a;
-            font-size: clamp(20px, 2.5vw, 27px);
-            font-weight: 600;
-            margin: 0 0 18px;
-        }
-
-        .home-description {
-            max-width: 650px;
-            color: #6d6070;
-            font-size: 17px;
-            line-height: 1.8;
-            margin: 0 0 28px;
-        }
-
-        .home-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-        }
-
-        .home-button {
-            display: inline-block;
-            padding: 14px 25px;
-            border: 2px solid #df4b91;
-            border-radius: 28px;
-            background: #df4b91;
-            color: #fff;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            transition: transform 0.2s, background 0.2s;
-        }
-
-        .home-button:hover {
-            transform: translateY(-2px);
-            background: #c7357b;
-            border-color: #c7357b;
-        }
-
-        .home-button-secondary {
-            background: transparent;
-            color: #c7357b;
-        }
-
-        .home-button-secondary:hover {
-            color: #fff;
-        }
-
-        .home-footer {
-            background: #fff;
-            color: #786879;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        .home-footer p {
-            margin: 0;
-        }
-
-        @media (max-width: 850px) {
-            .home-navbar {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .home-nav-links {
-                justify-content: center;
-            }
-
-            .home-hero {
-                min-height: 60vh;
-                padding: 60px 7%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .home-header {
-                padding: 18px 4%;
-            }
-
-            .home-logo {
-                font-size: 25px;
-            }
-
-            .home-nav-links {
-                gap: 3px;
-            }
-
-            .home-nav-links a {
-                padding: 8px 10px;
-                font-size: 14px;
-            }
-
-            .home-hero {
-                padding: 50px 7%;
-            }
-
-            .home-description {
-                font-size: 16px;
-            }
-
-            .home-buttons {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
 </head>
-
 <body>
+<header>
+    <a class="logo" href="index.html">Navya<span></span></a>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="certificates.html">Certificates</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <header class="home-header">
-        <nav class="home-navbar">
-            <a href="index.html" class="home-logo">Navya N<span>.</span></a>
+<main class="hero">
+    <section class="hero-text">
+        <p class="welcome">♡ WELCOME TO MY PORTFOLIO</p>
+        <h1>Hi, I'm <span>Navya N!</span></h1>
+        <h2>Student · Creator · Future Developer</h2>
+        <p class="intro">
+            I'm a second-year B.Sc. Information Technology student
+            who enjoys coding, designing, and turning creative ideas
+            into meaningful digital experiences.
+        </p>
+        <div class="hero-buttons">
+            <a class="btn" href="projects.html">View My Projects ↗</a>
+            <a class="btn secondary" href="about.html">About Me ♡</a>
+        </div>
 
-            <ul class="home-nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="certificates.html">Certificates</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="mini-info">
+            <div><strong>2nd</strong><span>Year Student</span></div>
+            <div><strong>5</strong><span>Certificates</span></div>
+            <div><strong>1</strong><span>Featured Project</span></div>
+        </div>
+    </section>
 
-    <main>
-        <section class="home-hero">
-            <div class="home-hero-content">
-                <p class="home-eyebrow">WELCOME TO MY PORTFOLIO</p>
+    <section class="hero-message">
+        <span class="decor-heart">♡</span>
+        <p class="small-label">  A LITTLE ABOUT MY JOURNEY</p>
+        <h2>Big dreams.<br><span>Creative ideas.</span><br></h2>
+        <div class="decor-line"></div>
+        <p>Exploring technology one idea at a time.</p>
+        <a href="skills.html" class="text-link">Explore my skills →</a>
+    </section>
+</main>
 
-                <h1>Hi, I'm <span>Navya N!</span></h1>
-
-                <p class="home-subtitle">
-                    Student · Creator · Future Developer
-                </p>
-
-                <p class="home-description">
-                    I'm a B.Sc. Information Technology student who enjoys
-                    learning new technologies, creating websites, and
-                    exploring creative ideas through coding and design.
-                </p>
-
-                <div class="home-buttons">
-                    <a href="projects.html" class="home-button">
-                        View My Projects
-                    </a>
-
-                    <a href="about.html"
-                       class="home-button home-button-secondary">
-                        About Me
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="home-footer">
-        <p>&copy; <span class="year">2026</span> Navya N. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+<footer>© <span class="year"></span> Navya N <span>Made with ♡</span></footer>
+<script src="script.js"></script>
 </body>
 </html>
