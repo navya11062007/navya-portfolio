@@ -1,0 +1,281 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #d65b91;
+    --dark-pink: #a9386b;
+    --light-pink: #fff0f6;
+    --text: #493642;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #fff8fb, #fde7f0);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 6%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px 15px rgba(150, 65, 105, 0.08);
+    flex-wrap: wrap;
+}
+
+header h2 {
+    color: var(--dark-pink);
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: var(--pink);
+    color: var(--white);
+}
+
+.home {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 6%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 50px;
+    flex: 1;
+}
+
+.welcome {
+    color: var(--pink);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.home-content h1 {
+    font-size: clamp(35px, 5vw, 55px);
+    margin-bottom: 15px;
+}
+
+h1 span,
+.home-content h1 span {
+    color: var(--pink);
+}
+
+.home-content h2 {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.home-content > p:not(.welcome) {
+    line-height: 1.8;
+    margin-bottom: 28px;
+    max-width: 600px;
+}
+
+.profile {
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 25px;
+    background: var(--white);
+    box-shadow: 0 10px 35px rgba(150, 65, 105, 0.12);
+}
+
+.profile-circle {
+    width: 150px;
+    height: 150px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f5a5c7, #d65b91);
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.profile p {
+    margin-top: 10px;
+    color: #806b79;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 55px 6%;
+    flex: 1;
+}
+
+.page-content > h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 35px;
+}
+
+.card {
+    background: var(--white);
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(150, 65, 105, 0.09);
+    border: 1px solid #f8dce8;
+}
+
+.card h2 {
+    color: var(--dark-pink);
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--dark-pink);
+    margin: 20px 0 8px;
+}
+
+.card p {
+    line-height: 1.8;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.grid .card {
+    transition: transform 0.25s;
+}
+
+.grid .card:hover {
+    transform: translateY(-4px);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--pink);
+    color: var(--white);
+    padding: 13px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--dark-pink);
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: var(--white);
+    color: var(--dark-pink);
+    border: 1px solid var(--pink);
+}
+
+.page-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.contact-card a {
+    color: var(--dark-pink);
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    margin-top: auto;
+}
+
+@media (max-width: 850px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .home-content > p:not(.welcome) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile {
+        max-width: 420px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 520px) {
+    nav a {
+        font-size: 12px;
+        padding: 8px 9px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-content {
+        padding: 35px 5%;
+    }
+
+    .page-content > h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .page-buttons {
+        justify-content: center;
+    }
+}
