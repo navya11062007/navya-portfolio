@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-    <a class="logo" href="index.html">navya<span>.</span></a>
+    <h2>Navya N</h2>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -22,91 +23,21 @@
 </header>
 
 <main class="page-content">
-    <p class="welcome">MY LEARNING JOURNEY</p>
     <h1>My <span>Certificates</span></h1>
-    <p class="gallery-intro">
-        Courses and topics I have learned.
-    </p>
-
-    <div class="certificate-grid">
-        <article class="certificate-card">
-            <a class="certificate-preview" href="#certificate-1"
-               onclick="return false;">
-                <img src="https://placehold.co/500x320/fff0f6/a9386b?text=Front-End+Web+Development"
-                     alt="Front-End Web Development certificate placeholder">
-                <span class="preview-label">Preview placeholder</span>
-            </a>
-            <div class="certificate-info">
-                <span class="certificate-number">01</span>
-                <h3>Front-End Web Development</h3>
-                <p>HTML, CSS &amp; Bootstrap</p>
-            </div>
-        </article>
-
-        <article class="certificate-card">
-            <a class="certificate-preview" href="#certificate-2"
-               onclick="return false;">
-                <img src="https://placehold.co/500x320/fff0f6/a9386b?text=Hosting+a+Static+Website"
-                     alt="Static website hosting certificate placeholder">
-                <span class="preview-label">Preview placeholder</span>
-            </a>
-            <div class="certificate-info">
-                <span class="certificate-number">02</span>
-                <h3>Hosting a Static Website</h3>
-                <p>HTML, CSS, JavaScript &amp; AWS S3</p>
-            </div>
-        </article>
-
-        <article class="certificate-card">
-            <a class="certificate-preview" href="#certificate-3"
-               onclick="return false;">
-                <img src="https://placehold.co/500x320/fff0f6/a9386b?text=Advanced+Java+Development"
-                     alt="Advanced Java Development certificate placeholder">
-                <span class="preview-label">Preview placeholder</span>
-            </a>
-            <div class="certificate-info">
-                <span class="certificate-number">03</span>
-                <h3>Advanced Java Development</h3>
-                <p>Java development</p>
-            </div>
-        </article>
-
-        <article class="certificate-card">
-            <a class="certificate-preview" href="#certificate-4"
-               onclick="return false;">
-                <img src="https://placehold.co/500x320/fff0f6/a9386b?text=Python+Data+Visualization"
-                     alt="Python data visualization certificate placeholder">
-                <span class="preview-label">Preview placeholder</span>
-            </a>
-            <div class="certificate-info">
-                <span class="certificate-number">04</span>
-                <h3>Python for Data Visualization</h3>
-                <p>Matplotlib &amp; Seaborn</p>
-            </div>
-        </article>
-
-        <article class="certificate-card">
-            <a class="certificate-preview" href="#certificate-5"
-               onclick="return false;">
-                <img src="https://placehold.co/500x320/fff0f6/a9386b?text=Big+Data+Computing"
-                     alt="Big Data Computing certificate placeholder">
-                <span class="preview-label">Preview placeholder</span>
-            </a>
-            <div class="certificate-info">
-                <span class="certificate-number">05</span>
-                <h3>Big Data Computing</h3>
-                <p>Big data computing</p>
-            </div>
-        </article>
+    <div class="grid">
+        <div class="card"><h3>Front-End Web Development</h3><p>HTML, CSS &amp; Bootstrap</p></div>
+        <div class="card"><h3>Hosting a Static Website</h3><p>HTML/CSS/JavaScript in AWS S3</p></div>
+        <div class="card"><h3>Advanced Java Development</h3></div>
+        <div class="card"><h3>Python for Data Visualization</h3><p>Matplotlib &amp; Seaborn</p></div>
+        <div class="card"><h3>Big Data Computing</h3></div>
     </div>
-
     <div class="page-buttons">
         <a class="btn secondary" href="education.html">← Previous</a>
-        <a class="btn" href="contact.html">Next: Contact →</a>
+        <a class="btn" href="contact.html">Next Page →</a>
     </div>
 </main>
 
-<footer>© <span class="year"></span> Navya N <span>Made with ♡</span></footer>
+<footer>© <span id="year"></span> Navya N | My Portfolio</footer>
 <script src="script.js"></script>
 </body>
 </html>
