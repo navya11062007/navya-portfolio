@@ -2,69 +2,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Navya N</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Projects | Navya</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <style>
+    /* ===================================
+       CURRENCY PROJECT PAGE ONLY
+       =================================== */
+
+    .currency-project-page {
+      width: 100%;
+      flex: 1;
+      padding: 55px 24px 70px;
+      background: linear-gradient(135deg, #fffaff, #f8efff);
+    }
+
+    .currency-project-page *,
+    .currency-project-page *::before,
+    .currency-project-page *::after {
+      box-sizing: border-box;
+    }
+
+    .currency-project-page .project-heading {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .currency-project-page .eyebrow {
+      margin-bottom: 12px;
+      color: #8b72c7;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .currency-project-page .project-heading h1 {
+      margin: 0 0 14px;
+      color: #30283c;
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1.2;
+    }
+
+    .currency-project-page .project-heading h1 span {
+      color: #8b72c7;
+    }
+
+    .currency-project-page .heading-description {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #746c80;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* Main project card */
+
+    .currency-project-page .currency-card {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #e5dcf4;
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(101, 80, 155, 0.13);
+    }
+
+    /* Decorative currency panel */
+
+    .currency-project-page .currency-art {
+      min-width: 0;
+      min-height: 390px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      text-align: center;
+      background: linear-gradient(145deg, #eee5fc, #d1bdf0);
+    }
+
+    .currency-project-page .currency-symbols {
+      width: 160px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(101, 80, 155, 0.12);
+      box-shadow: 0 12px 30px rgba(101, 80, 155, 0.12);
+      color: #65509b;
+      font-size: 43px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .currency-project-page .currency-art-title {
+      max-width: 250px;
+      color: #65509b;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      line-height: 1.9;
+    }
+
+    .currency-project-page .currency-art-subtitle {
+      color: #65509b;
+      font-size: 14px;
+    }
+
+    /* Project information */
+
+    .currency-project-page .currency-details {
+      min-width: 0;
+      padding: 42px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .currency-project-page .currency-details .eyebrow {
+      margin-bottom: 12px;
+    }
+
+    .currency-project-page .currency-details h2 {
+      margin: 0 0 18px;
+      color: #30283c;
+      font-size: clamp(25px, 3vw, 34px);
+      line-height: 1.3;
+      overflow-wrap: anywhere;
+    }
+
+    .currency-project-page .description {
+      margin: 0 0 18px;
+      color: #746c80;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .currency-project-page .details-heading {
+      margin: 7px 0 12px;
+      color: #30283c;
+      font-size: 16px;
+    }
+
+    /* Technology labels */
+
+    .currency-project-page .technology-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 0 0 26px;
+    }
+
+    .currency-project-page .technology-list span {
+      padding: 7px 13px;
+      border: 1px solid #e5dcf4;
+      border-radius: 30px;
+      background: #f2ebfc;
+      color: #65509b;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* GitHub button */
+
+    .currency-project-page .github-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      max-width: 100%;
+      padding: 13px 21px;
+      border: 1px solid #df4d91;
+      border-radius: 10px;
+      background: #df4d91;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .currency-project-page .github-link:hover {
+      background: #c8387b;
+      border-color: #c8387b;
+      transform: translateY(-2px);
+    }
+
+    .currency-project-page .github-link:focus-visible {
+      outline: 3px solid #8b72c7;
+      outline-offset: 4px;
+    }
+
+    /* Bottom section */
+
+    .currency-project-page .learning-section {
+      max-width: 850px;
+      margin: 38px auto 0;
+      padding: 28px 24px;
+      border: 1px solid #e5dcf4;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.8);
+      text-align: center;
+    }
+
+    .currency-project-page .learning-section h2 {
+      margin: 0 0 12px;
+      color: #30283c;
+      font-size: 25px;
+    }
+
+    .currency-project-page .learning-section > p:last-child {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #746c80;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* Tablet and mobile */
+
+    @media (max-width: 760px) {
+      .currency-project-page {
+        padding: 40px 18px 50px;
+      }
+
+      .currency-project-page .project-heading {
+        margin-bottom: 28px;
+      }
+
+      .currency-project-page .currency-card {
+        grid-template-columns: 1fr;
+      }
+
+      .currency-project-page .currency-art {
+        min-height: 240px;
+        padding: 25px 20px;
+        gap: 14px;
+      }
+
+      .currency-project-page .currency-symbols {
+        width: 105px;
+        height: 105px;
+        border-radius: 22px;
+        font-size: 30px;
+      }
+
+      .currency-project-page .currency-details {
+        padding: 28px;
+      }
+
+      .currency-project-page .learning-section {
+        margin-top: 28px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .currency-project-page {
+        padding-right: 13px;
+        padding-left: 13px;
+      }
+
+      .currency-project-page .currency-details {
+        padding: 22px 19px;
+      }
+
+      .currency-project-page .currency-details h2 {
+        font-size: 26px;
+      }
+
+      .currency-project-page .github-link {
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 13px;
+      }
+
+      .currency-project-page .learning-section {
+        padding: 23px 17px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header>
-    <a href="index.html" class="logo">Navya</a>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="skills.html">Skills</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="education.html">Education</a>
-        <a href="certificates.html">Certificates</a>
-        <a href="contact.html">Contact</a>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <a class="logo" href="index.html">Navya<span>.</span></a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="certificates.html">Certificates</a>
+      <a href="contact.html">Contact</a>
     </nav>
-</header>
+  </header>
 
-<main class="page-content">
-    <p class="welcome">MY CREATIVE WORK</p>
-    <h1>Featured <span>Project</span></h1>
+  <!-- Projects Content -->
+  <main class="currency-project-page">
 
-    <article class="card project-card">
-        <img class="project-image"
-             src="https://placehold.co/900x420/fff0f6/a9386b?text=NEXORA+-+Education+Support"
-             alt="Nexora education support platform concept preview">
+    <section class="project-heading">
+      <p class="eyebrow">WHAT I'VE BEEN BUILDING</p>
 
-        <p class="image-caption">
-            Concept preview — not a screenshot of a completed website.
+      <h1>My <span>Projects</span></h1>
+
+      <p class="heading-description">
+        Exploring ideas, learning new technologies, and building
+        practical solutions through code.
+      </p>
+    </section>
+
+    <!-- Currency Converter Card -->
+    <section class="currency-card">
+
+      <div class="currency-art">
+        <div class="currency-symbols" aria-label="Currency symbols">
+          $ € ₹
+        </div>
+
+        <p class="currency-art-title">
+          CURRENCY ✦ EXCHANGE ✦ CONVERSION
         </p>
 
-        <h2>Nexora</h2>
-        <p class="project-tag">Education Support Platform</p>
+        <p class="currency-art-subtitle">
+          Convert. Compare. Understand.
+        </p>
+      </div>
 
-        <h3>The Problem</h3>
-        <p>
-            Unpaid educational fees can interrupt a student's
-            education and create financial stress for students
-            and families.
+      <div class="currency-details">
+
+        <p class="eyebrow">FEATURED PROJECT</p>
+
+        <h2>Currency Exchange Rate Converter</h2>
+
+        <p class="description">
+          The Currency Exchange Rate Converter is a project designed
+          to help users convert an amount from one currency to another.
+          Currency conversion tools can help users understand the
+          equivalent value of money across different currencies and
+          compare prices internationally.
         </p>
 
-        <h3>Proposed Solution</h3>
-        <p>
-            Nexora aims to provide a trusted and transparent
-            platform connecting students who need educational
-            financial assistance with potential supporters.
+        <h3 class="details-heading">About the Project</h3>
+
+        <p class="description">
+          The project focuses on making currency conversion simple
+          and convenient through a user-friendly interface. Visit
+          the GitHub repository to explore the source code and learn
+          more about the implementation.
         </p>
 
-        <h3>Goal</h3>
-        <p>
-            Help students access educational support and reduce
-            barriers to continuing their studies.
-        </p>
-    </article>
+        <h3 class="details-heading">Project Category</h3>
 
-    <div class="page-buttons">
-        <a class="btn secondary" href="skills.html">← Previous</a>
-        <a class="btn" href="education.html">Next: Education →</a>
-    </div>
-</main>
+        <div class="technology-list">
+          <span>Currency Conversion</span>
+          <span>Web Development</span>
+        </div>
 
-<footer>© <span class="year"></span> Navya N <span>Made with ♡</span></footer>
-<script src="script.js"></script>
+        <a
+          class="github-link"
+          href="https://github.com/navya11062007/Currency-Exchange-Rate-Converter"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Project on GitHub <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+    <section class="learning-section">
+      <p class="eyebrow">MY LEARNING JOURNEY</p>
+
+      <h2>Learning Through Projects</h2>
+
+      <p>
+        Every project is an opportunity to explore new ideas,
+        improve technical skills, and gain practical experience
+        in Information Technology.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© <span class="current-year"></span> Navya</p>
+    <p>Designed with curiosity and care.</p>
+  </footer>
+
 </body>
 </html>
