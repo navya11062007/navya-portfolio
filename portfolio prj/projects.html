@@ -5,190 +5,208 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta
+    name="description"
+    content="Explore Navya's Currency Exchange Rate Converter and Java Online Order Processing and Invoice Generation System projects."
+  >
+
   <title>Projects | Navya</title>
 
+  <!-- Keep the existing portfolio stylesheet and script -->
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 
+  <!-- Pink and white theme for this page only -->
   <style>
-    /* ===================================
-       CURRENCY PROJECT PAGE ONLY
-       =================================== */
-
-    .currency-project-page {
-      width: 100%;
-      flex: 1;
-      padding: 55px 24px 70px;
-      background: linear-gradient(135deg, #fffaff, #f8efff);
+    :root {
+      --project-pink: #df4d91;
+      --project-pink-dark: #c8387b;
+      --project-pink-light: #fff0f6;
+      --project-pink-border: #f5cddd;
+      --project-text: #352631;
+      --project-muted: #786873;
+      --project-white: #ffffff;
     }
 
-    .currency-project-page *,
-    .currency-project-page *::before,
-    .currency-project-page *::after {
+    /* Main page */
+    .projects-content {
+      width: 100%;
+      min-height: 70vh;
+      padding: 55px 6% 70px;
+      background: linear-gradient(135deg, #fffafd, #fff0f6);
+    }
+
+    .projects-content *,
+    .projects-content *::before,
+    .projects-content *::after {
       box-sizing: border-box;
     }
 
-    .currency-project-page .project-heading {
-      max-width: 760px;
-      margin: 0 auto 38px;
+    .projects-content .projects-heading {
+      max-width: 750px;
+      margin: 0 auto 42px;
       text-align: center;
     }
 
-    .currency-project-page .eyebrow {
-      margin-bottom: 12px;
-      color: #8b72c7;
+    .projects-content .eyebrow {
+      margin-bottom: 10px;
+      color: var(--project-pink-dark);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
-    .currency-project-page .project-heading h1 {
+    .projects-content .projects-heading h1 {
       margin: 0 0 14px;
-      color: #30283c;
+      color: var(--project-text);
       font-size: clamp(34px, 5vw, 48px);
       line-height: 1.2;
     }
 
-    .currency-project-page .project-heading h1 span {
-      color: #8b72c7;
+    .projects-content .projects-heading h1 span {
+      color: var(--project-pink);
     }
 
-    .currency-project-page .heading-description {
-      max-width: 600px;
-      margin: 0 auto;
-      color: #746c80;
+    .projects-content .heading-description {
+      color: var(--project-muted);
       font-size: 16px;
       line-height: 1.8;
     }
 
-    /* Main project card */
-
-    .currency-project-page .currency-card {
+    /* Projects list */
+    .projects-content .projects-list {
       width: 100%;
-      max-width: 1000px;
+      max-width: 1050px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      overflow: hidden;
-      background: #ffffff;
-      border: 1px solid #e5dcf4;
-      border-radius: 22px;
-      box-shadow: 0 18px 45px rgba(101, 80, 155, 0.13);
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
-    /* Decorative currency panel */
-
-    .currency-project-page .currency-art {
+    /* Individual project card */
+    .projects-content .portfolio-project {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      width: 100%;
       min-width: 0;
-      min-height: 390px;
-      padding: 32px 24px;
+      overflow: hidden;
+      background: var(--project-white);
+      border: 1px solid var(--project-pink-border);
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(180, 65, 117, 0.09);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .projects-content .portfolio-project:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 42px rgba(180, 65, 117, 0.14);
+    }
+
+    /* Decorative project panel */
+    .projects-content .project-art {
+      min-width: 0;
+      min-height: 340px;
+      padding: 30px 24px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 20px;
       text-align: center;
-      background: linear-gradient(145deg, #eee5fc, #d1bdf0);
+      background: linear-gradient(145deg, #ffe8f1, #f8bfd7);
+      color: var(--project-pink-dark);
     }
 
-    .currency-project-page .currency-symbols {
-      width: 160px;
-      height: 160px;
+    .projects-content .project-symbol {
+      width: 145px;
+      height: 145px;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 30px;
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid rgba(101, 80, 155, 0.12);
-      box-shadow: 0 12px 30px rgba(101, 80, 155, 0.12);
-      color: #65509b;
-      font-size: 43px;
+      border: 1px solid rgba(223, 77, 145, 0.15);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 12px 30px rgba(180, 65, 117, 0.1);
+      color: var(--project-pink-dark);
+      font-size: 44px;
       font-weight: 800;
-      letter-spacing: 2px;
     }
 
-    .currency-project-page .currency-art-title {
+    .projects-content .project-art-caption {
       max-width: 250px;
-      color: #65509b;
       font-size: 12px;
       font-weight: 800;
-      letter-spacing: 1.5px;
-      line-height: 1.9;
+      letter-spacing: 1.2px;
+      line-height: 1.8;
     }
 
-    .currency-project-page .currency-art-subtitle {
-      color: #65509b;
+    .projects-content .project-art-subtitle {
       font-size: 14px;
+      color: #8f4667;
     }
 
-    /* Project information */
-
-    .currency-project-page .currency-details {
+    /* Project description area */
+    .projects-content .project-info {
       min-width: 0;
-      padding: 42px;
+      padding: 35px 38px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
     }
 
-    .currency-project-page .currency-details .eyebrow {
-      margin-bottom: 12px;
-    }
-
-    .currency-project-page .currency-details h2 {
-      margin: 0 0 18px;
-      color: #30283c;
-      font-size: clamp(25px, 3vw, 34px);
-      line-height: 1.3;
+    .projects-content .project-info h2 {
+      margin: 0 0 16px;
+      color: var(--project-text);
+      font-size: clamp(24px, 3vw, 31px);
+      line-height: 1.35;
       overflow-wrap: anywhere;
     }
 
-    .currency-project-page .description {
+    .projects-content .project-description {
       margin: 0 0 18px;
-      color: #746c80;
+      color: var(--project-muted);
       font-size: 15px;
-      line-height: 1.9;
+      line-height: 1.85;
     }
 
-    .currency-project-page .details-heading {
-      margin: 7px 0 12px;
-      color: #30283c;
+    .projects-content .project-info h3 {
+      margin: 4px 0 12px;
+      color: var(--project-text);
       font-size: 16px;
     }
 
-    /* Technology labels */
-
-    .currency-project-page .technology-list {
+    /* Technology tags */
+    .projects-content .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
-      margin: 0 0 26px;
+      margin: 0 0 23px;
     }
 
-    .currency-project-page .technology-list span {
+    .projects-content .project-tags span {
+      display: inline-block;
       padding: 7px 13px;
-      border: 1px solid #e5dcf4;
+      border: 1px solid var(--project-pink-border);
       border-radius: 30px;
-      background: #f2ebfc;
-      color: #65509b;
+      background: var(--project-pink-light);
+      color: var(--project-pink-dark);
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    /* GitHub button */
-
-    .currency-project-page .github-link {
+    /* GitHub buttons */
+    .projects-content .project-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
+      gap: 8px;
       max-width: 100%;
-      padding: 13px 21px;
-      border: 1px solid #df4d91;
-      border-radius: 10px;
-      background: #df4d91;
+      padding: 12px 19px;
+      border: 1px solid var(--project-pink);
+      border-radius: 9px;
+      background: var(--project-pink);
       color: #ffffff;
       font-size: 14px;
       font-weight: 700;
@@ -198,101 +216,110 @@
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .currency-project-page .github-link:hover {
-      background: #c8387b;
-      border-color: #c8387b;
+    .projects-content .project-link:hover {
+      background: var(--project-pink-dark);
+      border-color: var(--project-pink-dark);
+      color: #ffffff;
       transform: translateY(-2px);
     }
 
-    .currency-project-page .github-link:focus-visible {
-      outline: 3px solid #8b72c7;
+    .projects-content .project-link:focus-visible {
+      outline: 3px solid var(--project-pink);
       outline-offset: 4px;
     }
 
     /* Bottom section */
-
-    .currency-project-page .learning-section {
+    .projects-content .projects-closing {
       max-width: 850px;
-      margin: 38px auto 0;
-      padding: 28px 24px;
-      border: 1px solid #e5dcf4;
+      margin: 42px auto 0;
+      padding: 30px 24px;
+      border: 1px solid var(--project-pink-border);
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       text-align: center;
     }
 
-    .currency-project-page .learning-section h2 {
+    .projects-content .projects-closing h2 {
       margin: 0 0 12px;
-      color: #30283c;
+      color: var(--project-text);
       font-size: 25px;
     }
 
-    .currency-project-page .learning-section > p:last-child {
+    .projects-content .projects-closing > p:last-child {
       max-width: 620px;
       margin: 0 auto;
-      color: #746c80;
+      color: var(--project-muted);
       font-size: 14px;
       line-height: 1.8;
     }
 
-    /* Tablet and mobile */
+    /* Pink navigation highlight for Projects page */
+    body:has(.projects-content) .nav a.active {
+      background: var(--project-pink);
+      color: #ffffff;
+    }
 
+    /* Tablet and mobile */
     @media (max-width: 760px) {
-      .currency-project-page {
+      .projects-content {
         padding: 40px 18px 50px;
       }
 
-      .currency-project-page .project-heading {
+      .projects-content .projects-heading {
         margin-bottom: 28px;
       }
 
-      .currency-project-page .currency-card {
+      .projects-content .projects-list {
+        gap: 24px;
+      }
+
+      .projects-content .portfolio-project {
         grid-template-columns: 1fr;
       }
 
-      .currency-project-page .currency-art {
-        min-height: 240px;
-        padding: 25px 20px;
-        gap: 14px;
+      .projects-content .project-art {
+        min-height: 220px;
+        padding: 24px 20px;
+        gap: 13px;
       }
 
-      .currency-project-page .currency-symbols {
-        width: 105px;
-        height: 105px;
+      .projects-content .project-symbol {
+        width: 95px;
+        height: 95px;
         border-radius: 22px;
-        font-size: 30px;
+        font-size: 32px;
       }
 
-      .currency-project-page .currency-details {
-        padding: 28px;
+      .projects-content .project-info {
+        padding: 27px;
       }
 
-      .currency-project-page .learning-section {
+      .projects-content .projects-closing {
         margin-top: 28px;
       }
     }
 
     @media (max-width: 420px) {
-      .currency-project-page {
+      .projects-content {
         padding-right: 13px;
         padding-left: 13px;
       }
 
-      .currency-project-page .currency-details {
+      .projects-content .project-info {
         padding: 22px 19px;
       }
 
-      .currency-project-page .currency-details h2 {
-        font-size: 26px;
+      .projects-content .project-info h2 {
+        font-size: 25px;
       }
 
-      .currency-project-page .github-link {
+      .projects-content .project-link {
         width: 100%;
         padding: 12px 10px;
         font-size: 13px;
       }
 
-      .currency-project-page .learning-section {
+      .projects-content .projects-closing {
         padding: 23px 17px;
       }
     }
@@ -301,7 +328,7 @@
 
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <header class="site-header">
     <a class="logo" href="index.html">Navya<span>.</span></a>
 
@@ -324,87 +351,128 @@
     </nav>
   </header>
 
-  <!-- Projects Content -->
-  <main class="currency-project-page">
+  <!-- Main Projects Content -->
+  <main class="projects-content">
 
-    <section class="project-heading">
+    <section class="projects-heading">
       <p class="eyebrow">WHAT I'VE BEEN BUILDING</p>
 
       <h1>My <span>Projects</span></h1>
 
       <p class="heading-description">
-        Exploring ideas, learning new technologies, and building
+        Exploring ideas, learning technologies, and building
         practical solutions through code.
       </p>
     </section>
 
-    <!-- Currency Converter Card -->
-    <section class="currency-card">
+    <section class="projects-list">
 
-      <div class="currency-art">
-        <div class="currency-symbols" aria-label="Currency symbols">
-          $ € ₹
+      <!-- PROJECT 1: CURRENCY CONVERTER -->
+      <article class="portfolio-project">
+
+        <div class="project-art">
+          <div class="project-symbol" aria-label="Currency symbols">
+            $ € ₹
+          </div>
+
+          <p class="project-art-caption">
+            CURRENCY ✦ EXCHANGE ✦ CONVERSION
+          </p>
+
+          <p class="project-art-subtitle">
+            Convert. Compare. Understand.
+          </p>
         </div>
 
-        <p class="currency-art-title">
-          CURRENCY ✦ EXCHANGE ✦ CONVERSION
-        </p>
+        <div class="project-info">
+          <p class="eyebrow">PROJECT 01</p>
 
-        <p class="currency-art-subtitle">
-          Convert. Compare. Understand.
-        </p>
-      </div>
+          <h2>Currency Exchange Rate Converter</h2>
 
-      <div class="currency-details">
+          <p class="project-description">
+            A currency conversion project designed to help users
+            convert an amount from one currency to another.
+            It provides a practical way to explore currency
+            values and understand international price comparisons.
+          </p>
 
-        <p class="eyebrow">FEATURED PROJECT</p>
+          <h3>Project Category</h3>
 
-        <h2>Currency Exchange Rate Converter</h2>
+          <div class="project-tags">
+            <span>Currency Conversion</span>
+            <span>Web Development</span>
+          </div>
 
-        <p class="description">
-          The Currency Exchange Rate Converter is a project designed
-          to help users convert an amount from one currency to another.
-          Currency conversion tools can help users understand the
-          equivalent value of money across different currencies and
-          compare prices internationally.
-        </p>
-
-        <h3 class="details-heading">About the Project</h3>
-
-        <p class="description">
-          The project focuses on making currency conversion simple
-          and convenient through a user-friendly interface. Visit
-          the GitHub repository to explore the source code and learn
-          more about the implementation.
-        </p>
-
-        <h3 class="details-heading">Project Category</h3>
-
-        <div class="technology-list">
-          <span>Currency Conversion</span>
-          <span>Web Development</span>
+          <a
+            class="project-link"
+            href="https://github.com/navya11062007/Currency-Exchange-Rate-Converter"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Currency Project on GitHub ↗
+          </a>
         </div>
 
-        <a
-          class="github-link"
-          href="https://github.com/navya11062007/Currency-Exchange-Rate-Converter"
-          target="_blank"
-          rel="noopener noreferrer">
-          View Project on GitHub <span aria-hidden="true">↗</span>
-        </a>
+      </article>
 
-      </div>
+      <!-- PROJECT 2: JAVA ORDER PROCESSING SYSTEM -->
+      <article class="portfolio-project">
+
+        <div class="project-art">
+          <div class="project-symbol" aria-label="Java project">
+            Java
+          </div>
+
+          <p class="project-art-caption">
+            ORDERS ✦ PROCESSING ✦ INVOICES
+          </p>
+
+          <p class="project-art-subtitle">
+            Organize. Process. Generate.
+          </p>
+        </div>
+
+        <div class="project-info">
+          <p class="eyebrow">PROJECT 02 · JAVA</p>
+
+          <h2>Online Order Processing and Invoice Generation System</h2>
+
+          <p class="project-description">
+            A Java project focused on online order processing
+            and invoice generation. The system topic covers
+            managing order information and preparing invoices
+            to organize purchase details in a structured way.
+          </p>
+
+          <h3>Project Category</h3>
+
+          <div class="project-tags">
+            <span>Java</span>
+            <span>Order Processing</span>
+            <span>Invoice Generation</span>
+          </div>
+
+          <a
+            class="project-link"
+            href="https://github.com/navya11062007/java-prj_25bit129/blob/main/java_Project_document.pdf"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Java Project on GitHub ↗
+          </a>
+        </div>
+
+      </article>
 
     </section>
 
-    <section class="learning-section">
+    <!-- Closing Message -->
+    <section class="projects-closing">
       <p class="eyebrow">MY LEARNING JOURNEY</p>
 
       <h2>Learning Through Projects</h2>
 
       <p>
-        Every project is an opportunity to explore new ideas,
-        improve technical skills, and gain practical experience
+        Every project helps me explore new ideas, strengthen
+        my technical knowledge, and gain practical experience
         in Information Technology.
       </p>
     </section>
